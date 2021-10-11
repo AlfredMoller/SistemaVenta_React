@@ -7,10 +7,12 @@ app.use(cors());
 app.use(express.json()); //req.body
 
 
-//ROUTES
-
+//Routes to DashBoard And Authentication
 app.use("/auth", require("./routes/jwtAuth"));
 app.use("/dashboard", require("./routes/dashboard"));
+
+//Routes to Product
+//app.use("", require(""));
 
 app.set('port', process.env.port || 5000);
 let port= app.get('port');
