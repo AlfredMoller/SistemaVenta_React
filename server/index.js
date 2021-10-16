@@ -11,8 +11,15 @@ app.use(express.json()); //req.body
 app.use("/auth", require("./routes/jwtAuth"));
 app.use("/dashboard", require("./routes/dashboard"));
 
+//Routes to Department
+
+
 //Routes to Product
-//app.use("", require(""));
+app.use("/product", require("./routes/product"));
+//Routes to Product Categories
+app.use("/categ", require("./routes/categories"));
+//Routes to System Auditory
+app.use("/sysaudit", require("./routes/sys_audit"));
 
 app.set('port', process.env.port || 5000);
 let port= app.get('port');
